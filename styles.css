@@ -20,6 +20,7 @@ body {
   display: grid;
   grid-template-rows: repeat(2, 300px);
   grid-template-columns: repeat(3, 400px);
+  gap: 60px;
   background: linear-gradient(to right, #c07bbf, #b86ab7, #a14da0, #a14da0);
   padding-right: 150px;
 }
@@ -122,10 +123,10 @@ body {
   border-radius: 8px;
 }
 .gridcontainer .ledge {
+  position: absolute;
   background: white;
   padding-top: 1rem;
   width: 277.5px;
-  position: absolute;
   bottom: 0;
   right: 0;
   border: 1px solid transparent;
@@ -156,11 +157,12 @@ body {
 }
 
 .sidewall {
+  position: absolute;
   padding-top: 20px;
   padding-bottom: 20px;
+  top: 0;
   width: 10%;
-  height: 93%;
-  position: absolute;
+  height: 99.83%;
   right: 0;
   background: linear-gradient(to top, #7e1f86, #a14da0);
 }
@@ -201,9 +203,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
   background: #22333b;
   padding: 20px;
-  position: absolute;
   width: 23%;
   height: 1%;
   bottom: 0;
@@ -214,9 +216,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
   width: 120%;
   padding: 6px;
-  position: absolute;
   background: #3e5d6c;
   height: 5%;
 }
@@ -224,12 +226,553 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
   width: 120%;
   padding: 6px;
-  position: absolute;
   background: #22333b;
   bottom: 0;
   height: 10%;
+}
+
+.shadeleft {
+  position: absolute;
+  padding: 1.5rem 1rem;
+  width: 15%;
+  background: transparent;
+  transform: skew(-20deg) translate(-215%, -80%);
+}
+.shadeleft .shadeleftpiece1 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1%;
+  background: #ffc4d1;
+  left: -10px;
+}
+.shadeleft .shadeleftcircle1 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #ffc4d1;
+  left: -10px;
+}
+.shadeleft .shadeleftpiece2 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: #df57bc;
+  left: 16px;
+}
+.shadeleft .shadeleftcircle2 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #df57bc;
+  left: 16px;
+}
+.shadeleft .shadeleftpiece3 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: #ffc9d5;
+  left: 48px;
+}
+.shadeleft .shadeleftcircle3 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #ffc9d5;
+  left: 48px;
+}
+.shadeleft .shadeleftpiece4 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: #df57bc;
+  left: 72px;
+}
+.shadeleft .shadeleftcircle4 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #df57bc;
+  left: 72px;
+}
+.shadeleft .shadeleftpiece5 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: #ffced9;
+  left: 96px;
+}
+.shadeleft .shadeleftcircle5 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #ffced9;
+  left: 96px;
+}
+.shadeleft .shadeleftpiece6 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(to right, #df57bc, #df57bc, #a14da0);
+  left: 120px;
+}
+.shadeleft .shadeleftcircle6 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: linear-gradient(to right, #df57bc, #df57bc, #a14da0);
+  left: 120px;
+}
+.shadeleft .shadeleftpiece7 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(to left, #d9d8f8, #ffc4d1);
+  left: 150px;
+}
+.shadeleft .shadeleftcircle7 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: linear-gradient(to left, #d9d8f8, #ffc4d1);
+  left: 150px;
+}
+.shadeleft .shadeleftpiece8 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: #b86ab7;
+  left: 180px;
+}
+.shadeleft .shadeleftcircle8 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #b86ab7;
+  left: 180px;
+}
+.shadeleft .shadeleftpiece9 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(to left, #aeadf0, #ffc4d1);
+  left: 210px;
+}
+.shadeleft .shadeleftcircle9 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: linear-gradient(to left, #aeadf0, #ffc4d1);
+  left: 210px;
+}
+.shadeleft .shadeleftpiece10 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1%;
+  background: #a14da0;
+  left: 240px;
+}
+.shadeleft .shadeleftcircle10 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #a14da0;
+  left: 240px;
+}
+
+.shaderight {
+  position: absolute;
+  padding: 1.5rem 1rem;
+  width: 15%;
+  background: transparent;
+  transform: skew(-20deg) translate(150%, -80%);
+}
+.shaderight .shaderightpiece1 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1%;
+  background: #ffc4d1;
+  left: -10px;
+}
+.shaderight .shaderightcircle1 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #ffc4d1;
+  left: -10px;
+}
+.shaderight .shaderightpiece2 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(to right, #db42b3, #af58ae);
+  left: 16px;
+}
+.shaderight .shaderightcircle2 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: linear-gradient(to right, #db42b3, #af58ae);
+  left: 16px;
+}
+.shaderight .shaderightpiece3 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: #ffc9d5;
+  left: 48px;
+}
+.shaderight .shaderightcircle3 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #ffc9d5;
+  left: 48px;
+}
+.shaderight .shaderightpiece4 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(to right, #db42b3, #af58ae);
+  left: 72px;
+}
+.shaderight .shaderightcircle4 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: linear-gradient(to right, #db42b3, #af58ae);
+  left: 72px;
+}
+.shaderight .shaderightpiece5 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: #ffced9;
+  left: 96px;
+}
+.shaderight .shaderightcircle5 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #ffced9;
+  left: 96px;
+}
+.shaderight .shaderightpiece6 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: #b35fb2;
+  left: 120px;
+}
+.shaderight .shaderightcircle6 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #b35fb2;
+  left: 120px;
+}
+.shaderight .shaderightpiece7 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(to left, #d9d8f8, #ffc4d1);
+  left: 150px;
+}
+.shaderight .shaderightcircle7 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: linear-gradient(to left, #d9d8f8, #ffc4d1);
+  left: 150px;
+}
+.shaderight .shaderightpiece8 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: #a850a7;
+  left: 180px;
+}
+.shaderight .shaderightcircle8 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #a850a7;
+  left: 180px;
+}
+.shaderight .shaderightpiece9 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(to left, #aeadf0, #ffc4d1);
+  left: 210px;
+}
+.shaderight .shaderightcircle9 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: linear-gradient(to left, #aeadf0, #ffc4d1);
+  left: 210px;
+}
+.shaderight .shaderightpiece10 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  background: #6b61b6;
+  width: 1%;
+  left: 240px;
+}
+.shaderight .shaderightcircle10 {
+  position: inherit;
+  padding: 1.5rem 1rem;
+  width: 10px;
+  height: 10px;
+  width: 1px;
+  height: 0.5%;
+  top: 48px;
+  border-radius: 0 0 80% 80%;
+  z-index: -1;
+  transform: skewY(30deg);
+  background: #6b61b6;
+  left: 240px;
+}
+
+.bottom {
+  position: absolute;
+  padding: 20px 664px;
+  bottom: -39px;
+  left: 0;
+  background: linear-gradient(to right, #c07bbf, #b86ab7, #a14da0, #a14da0);
+  z-index: -1;
+}
+
+.vaseleft {
+  position: absolute;
+  padding: 25px;
+  background: #f3ede6;
+  border-radius: 0 0 50% 50%;
+  left: 0;
+  bottom: 0;
+  z-index: 25;
+  transform: translate(400px, -150px);
+}
+
+.vaseright {
+  position: absolute;
+  padding: 25px;
+  background: #f3ede6;
+  border-radius: 0 0 50% 50%;
+  left: 0;
+  bottom: 0;
+  z-index: 25;
+  transform: translate(875px, -150px);
+}
+
+.leafleft {
+  position: absolute;
+  padding: 20px;
+  background: #96e072;
+  left: -10px;
+  top: -20px;
+  border-radius: 0 100%;
+}
+
+.leafmiddle {
+  position: absolute;
+  padding: 20px;
+  background: #3da35d;
+  left: 10px;
+  top: -20px;
+  border-radius: 0 100%;
+  transform: rotate(50deg);
+}
+
+.leafright {
+  position: absolute;
+  padding: 20px;
+  background: #96e072;
+  left: 15px;
+  top: -15px;
+  border-radius: 100% 0;
+}
+
+.vaseleftcontainer {
+  position: absolute;
+  padding: 25px;
+  background: #f3ede6;
+  border-radius: 0 0 50% 50%;
+  left: 0;
+  bottom: 0;
+  z-index: 25;
+  transform: translate(400px, -150px);
+}
+
+.vaserightcontainer {
+  position: absolute;
+  padding: 25px;
+  background: #f3ede6;
+  border-radius: 0 0 50% 50%;
+  left: 0;
+  bottom: 0;
+  z-index: 25;
+  transform: translate(875px, -150px);
 }
 
 /*# sourceMappingURL=styles.css.map */

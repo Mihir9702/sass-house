@@ -1,4 +1,5 @@
 @import 'mixins'
+@import 'shades'
 
 body
     @include center()
@@ -16,6 +17,7 @@ body
     display: grid
     grid-template-rows: repeat(2, 300px)
     grid-template-columns: repeat(3, 400px)
+    gap: 60px
     background: linear-gradient(to right, lighten($lightpurple, 15%), lighten($lightpurple, 10%),$lightpurple, $lightpurple)
     padding-right: 150px
 
@@ -60,23 +62,24 @@ body
     z-index: 22
 
 .sidewall
+    @include absolute()
     padding-top: 20px
     padding-bottom: 20px
+    top: 0
     width: 10%
-    height: 93%
-    position: absolute
+    height: 99.83%
     right: 0
     background: linear-gradient(to top, $purple, $lightpurple)
 
 .doorframe
-    position: absolute
+    @include absolute()
     padding: 60px 98px
     border: 10px solid $purple
     bottom: 0
     transform: translateX(-31.5%)
 
 .doorframedoorleft
-    position: absolute
+    @include absolute()
     padding: 60px
     padding-left: 80px
     border: 10px solid $purple
@@ -87,7 +90,7 @@ body
     border-left: none
 
 .doorframedoorright
-    position: absolute
+    @include absolute()
     padding: 60px
     padding-left: 80px
     border: 10px solid $purple
@@ -99,9 +102,9 @@ body
 
 .stepcontainer
     @include center()
+    @include absolute()
     background: $topgray
     padding: 20px
-    position: absolute
     width: 23%
     height: 1%
     bottom: 0
@@ -120,3 +123,60 @@ body
         background: $topgray
         bottom: 0
         height: 10%
+
+.shadeleft
+    @include leftshades()
+    transform: skew(-20deg) translate(-215%, -80%)
+
+.shaderight
+    @include rightshades()
+    transform: skew(-20deg) translate(150%, -80%)
+
+.bottom
+    @include absolute()
+    padding: 20px 664px
+    bottom: -39px
+    left: 0
+    background: linear-gradient(to right, lighten($lightpurple, 15%), lighten($lightpurple, 10%),$lightpurple, $lightpurple)
+    z-index: -1
+
+.vaseleft
+    @include vase()
+    transform: translate(400px, -150px)
+
+.vaseright
+    @include vase()
+    transform: translate(875px, -150px)
+
+.leafleft
+    @include absolute()
+    padding: 20px
+    background: $lightgreen
+    left: -10px
+    top: -20px
+    border-radius: 0 100%
+
+.leafmiddle
+    @include absolute()
+    padding: 20px
+    background: $green
+    left: 10px
+    top: -20px
+    border-radius: 0 100%
+    transform: rotate(50deg)
+
+.leafright
+    @include absolute()
+    padding: 20px
+    background: $lightgreen
+    left: 15px
+    top: -15px
+    border-radius: 100% 0
+
+.vaseleftcontainer
+    @include vase
+    transform: translate(400px, -150px)
+
+.vaserightcontainer
+    @include vase
+    transform: translate(875px, -150px)

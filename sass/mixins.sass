@@ -1,5 +1,10 @@
 @import 'vars'
 
+$doorbackground: linear-gradient(to right, darken($pinkpink, 5%), lighten($lightpurple, 15%))
+
+@mixin absolute()
+    position: absolute
+
 @mixin center()
     display: flex
     justify-content: center
@@ -16,17 +21,16 @@
     border-radius: 8px
 
 @mixin windowLedge()
+    @include absolute()
     background: white
     padding-top: 1rem
     width: 277.5px
-    position: absolute
     bottom: 0
     right: 0
     border: 1px solid transparent
     border-top: none
     border-radius: 3px
 
-$doorbackground: linear-gradient(to right, darken($pinkpink, 5%), lighten($lightpurple, 15%))
 @mixin doorOuter($size)
     content: ""
     position: inherit
@@ -48,7 +52,7 @@ $doorbackground: linear-gradient(to right, darken($pinkpink, 5%), lighten($light
     background: $doorbackground
 
 @mixin roofside($width, $roofColor)
-    position: absolute
+    @include absolute()
     padding: 10px 0
     width: $width
     top: 0
@@ -57,6 +61,15 @@ $doorbackground: linear-gradient(to right, darken($pinkpink, 5%), lighten($light
     background: $roofColor
 
 @mixin steps()
+    @include absolute()
     width: 120%
     padding: 6px
-    position: absolute
+
+@mixin vase()
+    @include absolute()
+    padding: 25px
+    background: lighten($almond, 5%)
+    border-radius: 0 0 50% 50%
+    left: 0
+    bottom: 0
+    z-index: 25

@@ -1,0 +1,212 @@
+@import 'vars'
+
+@mixin shadeframes()
+    position: inherit
+    padding: 1.5rem 1rem
+    width: 10px
+    height: 10px
+
+@mixin shadecricles()
+    @include shadeframes()
+    width: 1px
+    height: 0.5%
+    top: 48px
+    border-radius: 0 0 80% 80%
+    z-index: -1
+    transform: skewY(30deg)
+
+@mixin leftshades()
+    position: absolute
+    padding: 1.5rem 1rem
+    width: 15%
+    background: transparent
+
+    .shadeleftpiece1
+        @include shadeframes()
+        width: 1%
+        background: $pinkpink
+        left: -10px
+    .shadeleftcircle1
+        @include shadecricles()
+        background: $pinkpink
+        left: -10px
+
+    .shadeleftpiece2
+        @include shadeframes()
+        background: $rosepink
+        left: 16px
+    .shadeleftcircle2
+        @include shadecricles()
+        background: $rosepink
+        left: 16px
+
+    .shadeleftpiece3
+        @include shadeframes()
+        background: lighten($pinkpink, 1%)
+        left: 48px
+    .shadeleftcircle3
+        @include shadecricles()
+        background: lighten($pinkpink, 1%)
+        left: 48px
+
+    .shadeleftpiece4
+        @include shadeframes()
+        background: $rosepink
+        left: 72px
+    .shadeleftcircle4
+        @include shadecricles()
+        background: $rosepink
+        left: 72px
+
+    .shadeleftpiece5
+        @include shadeframes()
+        background: lighten($pinkpink, 2%)
+        left: 96px
+    .shadeleftcircle5
+        @include shadecricles()
+        background: lighten($pinkpink, 2%)
+        left: 96px
+
+    .shadeleftpiece6
+        @include shadeframes()
+        background: linear-gradient(to right, $rosepink, $rosepink, $lightpurple)
+        left: 120px
+    .shadeleftcircle6
+        @include shadecricles()
+        background: linear-gradient(to right, $rosepink, $rosepink, $lightpurple)
+        left: 120px
+
+    .shadeleftpiece7
+        @include shadeframes()
+        background: linear-gradient(to left, lighten($bluepurple, 10%), $pinkpink)
+        left: 150px
+    .shadeleftcircle7
+        @include shadecricles()
+        background: linear-gradient(to left, lighten($bluepurple, 10%), $pinkpink)
+        left: 150px
+
+    .shadeleftpiece8
+        @include shadeframes()
+        background: lighten($lightpurple, 10%)
+        left: 180px
+    .shadeleftcircle8
+        @include shadecricles()
+        background: lighten($lightpurple, 10%)
+        left: 180px
+
+    .shadeleftpiece9
+        @include shadeframes()
+        background: linear-gradient(to left, $bluepurple, $pinkpink)
+        left: 210px
+    .shadeleftcircle9
+        @include shadecricles()
+        background: linear-gradient(to left, $bluepurple, $pinkpink)
+        left: 210px
+
+    .shadeleftpiece10
+        @include shadeframes()
+        width: 1%
+        background: $lightpurple
+        left: 240px
+    .shadeleftcircle10
+        @include shadecricles()
+        background: $lightpurple
+        left: 240px
+
+@mixin rightshades()
+    position: absolute
+    padding: 1.5rem 1rem
+    width: 15%
+    background: transparent
+
+    .shaderightpiece1
+        @include shadeframes()
+        width: 1%
+        background: $pinkpink
+        left: -10px
+    .shaderightcircle1
+        @include shadecricles()
+        background: $pinkpink
+        left: -10px
+
+    .shaderightpiece2
+        @include shadeframes()
+        background: linear-gradient(to right, darken($rosepink, 5%), lighten($lightpurple, 5%))
+        left: 16px
+    .shaderightcircle2
+        @include shadecricles()
+        background: linear-gradient(to right, darken($rosepink, 5%), lighten($lightpurple, 5%))
+        left: 16px
+
+    .shaderightpiece3
+        @include shadeframes()
+        background: lighten($pinkpink, 1%)
+        left: 48px
+    .shaderightcircle3
+        @include shadecricles()
+        background: lighten($pinkpink, 1%)
+        left: 48px
+
+    .shaderightpiece4
+        @include shadeframes()
+        background: linear-gradient(to right, darken($rosepink, 5%), lighten($lightpurple, 5%))
+        left: 72px
+    .shaderightcircle4
+        @include shadecricles()
+        background: linear-gradient(to right, darken($rosepink, 5%), lighten($lightpurple, 5%))
+        left: 72px
+
+    .shaderightpiece5
+        @include shadeframes()
+        background: lighten($pinkpink, 2%)
+        left: 96px
+    .shaderightcircle5
+        @include shadecricles()
+        background: lighten($pinkpink, 2%)
+        left: 96px
+
+    .shaderightpiece6
+        @include shadeframes()
+        background: lighten($lightpurple, 7%)
+        left: 120px
+    .shaderightcircle6
+        @include shadecricles()
+        background: lighten($lightpurple, 7%)
+        left: 120px
+
+    .shaderightpiece7
+        @include shadeframes()
+        background: linear-gradient(to left, lighten($bluepurple, 10%), $pinkpink)
+        left: 150px
+    .shaderightcircle7
+        @include shadecricles()
+        background: linear-gradient(to left, lighten($bluepurple, 10%), $pinkpink)
+        left: 150px
+
+    .shaderightpiece8
+        @include shadeframes()
+        background: lighten($lightpurple, 2%)
+        left: 180px
+    .shaderightcircle8
+        @include shadecricles()
+        background: lighten($lightpurple, 2%)
+        left: 180px
+
+    .shaderightpiece9
+        @include shadeframes()
+        background: linear-gradient(to left, $bluepurple, $pinkpink)
+        left: 210px
+    .shaderightcircle9
+        @include shadecricles()
+        background: linear-gradient(to left, $bluepurple, $pinkpink)
+        left: 210px
+
+    .shaderightpiece10
+        @include shadeframes()
+        background: lighten($plumpurple, 10%)
+        width: 1%
+        left: 240px
+    .shaderightcircle10
+        @include shadecricles()
+        background: lighten($plumpurple, 10%)
+        left: 240px
