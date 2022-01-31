@@ -22,31 +22,32 @@ body
     padding-right: 150px
 
     .grid1
-        @include windows($purple, $lightpurple)
+        @include windows($purple, $purple, $lightpurple, lighten($lightpurple, 5%))
 
     .grid2
-        @include windows($paradisepink, $lightpink)
+        @include windows($white, $white, $white, $white)
+        background: linear-gradient(45deg, #d90368, lighten(#ec2b5c, 5%), lighten(#fa484f, 5%), #ff9e2e, #ffd43a)
 
     .grid3
-        @include windows(lighten($pink, 5%), $pinkpink)
+        @include windows(darken($pinkpink, 10%), darken($pinkpink, 5%), lighten($pinkpink, 2%), lighten($pinkpink, 5%))
 
     .grid4
-        @include windows($trueblue, $blue)
+        @include windows($trueblue, $trueblue, $blue, $lightblue)
 
     .grid5
         $size: 50px
-        @include windows($lightpurple, $purple)
+        @include windows($lightpurple, $lightpurple, $purple, $purple)
         border: none
         background: none
         &::before
-            @include windows($lightpurple, $purple)
+            @include windows($lightpurple, $lightpurple, $purple, $purple)
             @include doorInner($size)
 
         &::after
-            @include windows($lightpurple, $purple)
+            @include windows($lightpurple, $lightpurple, $purple, $purple)
             @include doorOuter($size)
     .grid6
-        @include windows($plumpurple, $plumpurple)
+        @include windows($midnightpurple, darken($midnightpurple, 5%), lighten($plumpurple, 5%), $plumpurple)
 
     .ledge
         @include windowLedge()
@@ -180,3 +181,18 @@ body
 .vaserightcontainer
     @include vase
     transform: translate(875px, -150px)
+
+.vasehangerleft
+    @include vasehanger()
+    transform: scale(2) translate(198px, -100%)
+
+.vasehangerright
+    @include vasehanger()
+    transform: scale(2) translate(435px, -100%)
+
+.leftblock
+    @include center()
+    padding: 14px
+    background: lighten($lightpurple, 15%)
+    position: absolute
+    left: -24px

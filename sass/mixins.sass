@@ -10,13 +10,13 @@ $doorbackground: linear-gradient(to right, darken($pinkpink, 5%), lighten($light
     justify-content: center
     align-items: center
 
-@mixin windows($color1, $color2)
+@mixin windows($color1, $color2, $color3, $color4)
     position: relative
     padding: 100px
     width: 20%
     height: 10%
     transform: translate(20%, 15%)
-    background: linear-gradient(to right, $color1, $color2)
+    background: linear-gradient(45deg, $color1, $color2, $color3, $color4)
     border: 10px solid $purple
     border-radius: 8px
 
@@ -73,3 +73,11 @@ $doorbackground: linear-gradient(to right, darken($pinkpink, 5%), lighten($light
     left: 0
     bottom: 0
     z-index: 25
+
+@mixin vasehanger()
+    @include absolute()
+    background: url('/vase.png')
+    width: 50px
+    height: 15%
+    left: 0
+    bottom: 0
